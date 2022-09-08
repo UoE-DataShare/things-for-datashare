@@ -1,0 +1,41 @@
+<dublin_core>
+  <dcvalue element="title" qualifier="none">Tower Blocks UK: substitute-me-city substitute-me-development</dcvalue>
+  <dcvalue element="contributor" qualifier="other">University of Edinburgh. Scottish Centre for Conservation Studies (SCCS)</dcvalue>
+  <dcvalue element="contributor" qualifier="other">DOCOMOMO International</dcvalue>
+  <dcvalue element="contributor">Glendinning, Miles</dcvalue>
+  <dcvalue element="publisher" qualifier="none">University of Edinburgh. Edinburgh College of Art</dcvalue>
+  <dcvalue element="type" qualifier="none">image</dcvalue>
+  <dcvalue element="rights" qualifier="none">CC-BY</dcvalue>
+  <dcvalue element="description" qualifier="abstract">substitute-me-abstract </dcvalue>
+  <dcvalue element="creator" qualifier="none">Glendinning, Miles</dcvalue>
+  <dcvalue element="coverage" qualifier="spatial">substitute-me-city</dcvalue>
+  <dcvalue element="coverage" qualifier="spatial">United Kingdom</dcvalue>
+  <dcvalue element="subject">landscape architecture</dcvalue>
+  <dcvalue element="subject">mass housing </dcvalue>
+  <dcvalue element="subject">public housing</dcvalue>
+  <dcvalue element="subject">enterprise housing</dcvalue>
+  <dcvalue element="subject">tower block</dcvalue>
+  <dcvalue element="subject">prefabrication</dcvalue>
+  <dcvalue element="subject">socialism</dcvalue>
+  <dcvalue element="subject">multi-storey block</dcvalue>
+  <dcvalue element="subject">neighbourhood unit</dcvalue>
+  <dcvalue element="subject">housing scheme</dcvalue>
+  <dcvalue element="subject">housing estate</dcvalue>
+  <dcvalue element="subject">industrialised building</dcvalue>
+  <dcvalue element="subject">sectional planning</dcvalue>
+  <dcvalue element="subject">slab block</dcvalue>
+  <dcvalue element="subject">Zeilenbau</dcvalue>
+  <dcvalue element="subject">tenement block</dcvalue>
+  <dcvalue element="subject">residential district</dcvalue>
+  <dcvalue element="subject">walk-up flats</dcvalue>
+  <dcvalue element="subject">low-rise housing</dcvalue>
+  <dcvalue element="subject">modern architecture</dcvalue>
+  <dcvalue element="subject">modernism</dcvalue>
+  <dcvalue element="subject">postmodernism</dcvalue>
+  <dcvalue element="subject">Art Deco</dcvalue>
+  <dcvalue element="subject" qualifier="classification">Architecture Building and Planning::Housing</dcvalue>
+  <dcvalue element="coverage" qualifier="temporal">start=substitute-me-year; end=substitute-me-year; scheme=W3C-DTF</dcvalue>
+  <dcvalue element="relation" qualifier="isreferencedby">http://towerblock.org/TowerBlock.pdf</dcvalue>
+  <dcvalue element="relation" qualifier="isreferencedby">Glendinning, Miles, and Stefan. Muthesius. Tower Block : Modern Public Housing in England, Scotland, Wales and Northern Ireland / Miles Glendinning and Stefan Muthesius. New Haven;: Published for the Paul Mellon Centre for Studies in British Art by Yale University Press, 1994. Print.</dcvalue>
+  <dcvalue element="language" qualifier="iso">eng</dcvalue>
+</dublin_core>
