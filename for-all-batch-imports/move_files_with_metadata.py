@@ -42,7 +42,7 @@ def main():
         if 'Error' in str(row['Image date']):
             year_taken = 'unknown'
         else:
-            year_taken = str(int(row['Image date']))
+            year_taken = str(row['Image date'])
         description = make_description(row)
         
         #write metadata
