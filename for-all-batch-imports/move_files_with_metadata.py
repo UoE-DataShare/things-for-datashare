@@ -14,10 +14,7 @@ def main():
     #load spreadsheet as a pandas dataframe
     df = pd.read_excel('masterspreadsheet_edited.xlsx') #uncomment the appropriate one
     # df = pd.read_csv('masterspreadsheet_openrefine.csv') #uncomment the appropriate one
-    # df = pd.read_excel('masterspreadsheet_edited.xlsx') #uncomment the appropriate one
-    
-    dev_number = {} #to keep track of multiple buildings in the same development
-    
+     
     for i, row in df.iterrows(): #go through rows in spreadsheet
         if i%100==0: #to keep track of progress
             print("%i / %i"%(i, len(df)))
@@ -28,13 +25,8 @@ def main():
         impath = row['Image file'].replace('D:\Towerblock Digitised Images', '.')
         imfold = os.path.split(impath)[0]
         
-        #name and number of development
+        #name of development
         development = row['Original Development name(s)']
-        if development in dev_number.keys(): 
-        #if there are multiple pictures/buildings from one development
-            dev_number[development]  += 1
-        else:
-            dev_number[development] = 1
             
         #other info about development
         #city
@@ -60,13 +52,14 @@ def main():
                 continue
             
             #add info to metadata template if substitution necessary
+            # if dataset title line (three substitutions on this line)
             if 'substitute-me-city' in line:
-                if dev_number[development] == 1 and 'substitute-me-development' in line:
+                if 'substitute-me-development' in line:
                     metadata_temp = metadata_temp + line.replace('substitute-me-city', city).replace('substitute-me-development', development)
-                elif 'substitute-me-development' in line:
-                    metadata_temp = metadata_temp + line.replace('substitute-me-city', city).replace('substitute-me-development', "%s %i"%(development, dev_number[development]))
                 else:
                     metadata_temp = metadata_temp + line.replace('substitute-me-city', city)
+                if 'substitute-me-image' in line: 
+                    metadata_temp = metadata_temp + line.replace('substitute-me-image', row['Image name'])
             
             elif 'substitute-me-abstract' in line:
                 metadata_temp = metadata_temp + line.replace('substitute-me-abstract', description)
@@ -75,7 +68,7 @@ def main():
             else: #if no substitution necessary, just copy line (e.g. for keywords)
                 metadata_temp = metadata_temp + line
         
-        outfold = 'processed/%s-%s-%i'%(city, development, dev_number[development]) #folder to write output to
+        outfold = 'processed/%s-%s-%i'%(city, development, row['Image name']) #folder to write output to
         outfold = outfold.replace(':', '_')
         os.makedirs(outfold, exist_ok=True)
         with open(outfold +'\\dublin_core.xml', 'w+') as f:
