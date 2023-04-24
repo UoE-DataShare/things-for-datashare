@@ -1,5 +1,5 @@
 <dublin_core>
-  <dcvalue element="title" qualifier="none">Tower Blocks UK: substitute-me-city substitute-me-development</dcvalue>
+  <dcvalue element="title" qualifier="none">Tower Blocks UK: substitute-me-city substitute-me-development substitute_me_image</dcvalue>
   <dcvalue element="contributor" qualifier="other">University of Edinburgh. Scottish Centre for Conservation Studies (SCCS)</dcvalue>
   <dcvalue element="contributor" qualifier="other">DOCOMOMO International</dcvalue>
   <dcvalue element="contributor">Glendinning, Miles</dcvalue>

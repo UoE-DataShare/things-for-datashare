@@ -21,6 +21,9 @@ def main():
         #skip rows with no associated image
         if ('ERROR' in row['Image file']) or ('Could not' in row['Image file']): 
             continue
+        #skip rows from Aberdeen
+        if ('Aberdeen City' in row['Present-day Location Authority']) or ('Aberdeen City' in row['Original Location Authority'])
+            continue
         #get location of images and folder
         impath = row['Image file'].replace('D:\Towerblock Digitised Images', '.')
         imfold = os.path.split(impath)[0]
