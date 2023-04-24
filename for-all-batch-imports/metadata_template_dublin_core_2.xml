@@ -36,6 +36,6 @@
   <dcvalue element="subject" qualifier="classification">Architecture Building and Planning::Housing</dcvalue>
   <dcvalue element="coverage" qualifier="temporal">start=substitute-me-year; end=substitute-me-year; scheme=W3C-DTF</dcvalue>
   <dcvalue element="relation" qualifier="isreferencedby">http://towerblock.org/TowerBlock.pdf</dcvalue>
-  <dcvalue element="relation" qualifier="isreferencedby">Glendinning, Miles, and Stefan. Muthesius. Tower Block : Modern Public Housing in England, Scotland, Wales and Northern Ireland / Miles Glendinning and Stefan Muthesius. New Haven;: Published for the Paul Mellon Centre for Studies in British Art by Yale University Press, 1994. Print.</dcvalue>
+  <dcvalue element="relation" qualifier="isreferencedby">Miles Glendinning and Stefan Muthesius "Tower Block: Modern Public Housing in England, Scotland, Wales and Northern Ireland" (1994) Yale University Press. ISBN: 0-300-05444-0. Print.</dcvalue>
   <dcvalue element="language" qualifier="iso">eng</dcvalue>
 </dublin_core>
