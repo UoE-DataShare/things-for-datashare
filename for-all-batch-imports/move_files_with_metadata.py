@@ -73,6 +73,9 @@ def main():
         
         outfold = 'processed/%s-%s-%s'%(city, development, row['Image name']) #folder to write output to
         outfold = outfold.replace(':', '_')
+        outfold = outfold.replace(';','_')
+        outfold = outfold.replace('.', '_')
+        outfold = outfold.replace('&', 'and')
         os.makedirs(outfold, exist_ok=True)
         with open(outfold +'\\dublin_core.xml', 'w+') as f:
             f.write(metadata_temp)
