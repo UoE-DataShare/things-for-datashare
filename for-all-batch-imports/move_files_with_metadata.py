@@ -71,7 +71,7 @@ def main():
             else: #if no substitution necessary, just copy line (e.g. for keywords)
                 metadata_temp = metadata_temp + line
         
-        outfold = 'processed/%s-%s-%i'%(city, development, row['Image name']) #folder to write output to
+        outfold = 'processed/%s-%s-%s'%(city, development, row['Image name']) #folder to write output to
         outfold = outfold.replace(':', '_')
         os.makedirs(outfold, exist_ok=True)
         with open(outfold +'\\dublin_core.xml', 'w+') as f:
