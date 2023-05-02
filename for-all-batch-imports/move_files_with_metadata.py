@@ -61,8 +61,8 @@ def main():
                     metadata_temp = metadata_temp + line.replace('substitute-me-city', city).replace('substitute-me-development', development)
                 else:
                     metadata_temp = metadata_temp + line.replace('substitute-me-city', city)
-                if 'substitute-me-image' in line: 
-                    metadata_temp = metadata_temp + line.replace('substitute-me-image', row['Image name'])
+                if 'substitute_me_image' in line: 
+                    metadata_temp = metadata_temp + line.replace('substitute_me_image', row['Image name'])
             
             elif 'substitute-me-abstract' in line:
                 metadata_temp = metadata_temp + line.replace('substitute-me-abstract', description)
@@ -71,7 +71,8 @@ def main():
             else: #if no substitution necessary, just copy line (e.g. for keywords)
                 metadata_temp = metadata_temp + line
         
-        outfold = 'processed/%s-%s-%s'%(city, development, row['Image name']) #folder to write output to
+        # Construct the name of the folder where output will be written
+        outfold = 'processed/%s-%s-%s'%(city, development[0:19], row['Image name']) #truncate development name to first twenty characters
         outfold = outfold.replace(':', '_')
         outfold = outfold.replace(';','_')
         outfold = outfold.replace('.', '_')
