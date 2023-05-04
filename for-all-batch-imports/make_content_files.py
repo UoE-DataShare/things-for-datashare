@@ -8,7 +8,7 @@ def main():
         with open("%s/contents"%fold, 'w+') as f:
             for file in filelist:
                 #skip metadata and contents
-                if 'contents' in file or 'dublin_core.xml' in file:
+                if  file == 'contents' or 'dublin_core.xml' in file:
                     continue
                 else:
                     f.write("%s\n"%file)
