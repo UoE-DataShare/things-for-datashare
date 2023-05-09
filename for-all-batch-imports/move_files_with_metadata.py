@@ -22,7 +22,7 @@ def main():
         if ('ERROR' in row['Image file']) or ('Could not' in row['Image file']): 
             continue
         #skip rows from Aberdeen
-        if ('Aberdeen City' in row['Present-day Location Authority']) or ('Aberdeen City' in row['Original Location Authority']):
+        if (row['Present-day Location Authority'] == 'Aberdeen City Council'):
             continue
         #get location of images and folder
         impath = row['Image file'].replace('D:\Towerblock Digitised Images', '.')
@@ -45,7 +45,7 @@ def main():
             year_taken = str(row['Image date'])
         description = make_description(row)
         
-        #write metadata
+        #write metadata for this image into a string variable, in XML format
         metadata_temp = ''
         for line in metadata:
             #skip lines as necessary
@@ -57,13 +57,10 @@ def main():
             #add info to metadata template if substitution necessary
             # if dataset title line (three substitutions on this line)
             if 'substitute-me-city' in line:
-                if 'substitute-me-development' in line:
-                    metadata_temp = metadata_temp + line.replace('substitute-me-city', city).replace('substitute-me-development', development)
-                else:
-                    metadata_temp = metadata_temp + line.replace('substitute-me-city', city)
-                if 'substitute_me_image' in line: 
-                    metadata_temp = metadata_temp + line.replace('substitute_me_image', row['Image name'])
-            
+                    dataset_title_line = line.replace('substitute-me-city', city)
+                    dataset_title_line = dataset_title_line.replace('substitute-me-development', development)
+                    dataset_title_line = dataset_title_line.replace('substitute_me_image', row['Image name'])
+                    metadata_temp = metadata_temp + dataset_title_line
             elif 'substitute-me-abstract' in line:
                 metadata_temp = metadata_temp + line.replace('substitute-me-abstract', description)
             elif 'substitute-me-year' in line:
@@ -77,7 +74,8 @@ def main():
         outfold = outfold.replace(';','_')
         outfold = outfold.replace('.', '_')
         outfold = outfold.replace('&', 'and')
-        os.makedirs(outfold, exist_ok=True)
+        os.makedirs(outfold, exist_ok=True) 
+        # write the transformed metadata XML to the dublin core XML file
         with open(outfold +'\\dublin_core.xml', 'w+') as f:
             f.write(metadata_temp)
         
