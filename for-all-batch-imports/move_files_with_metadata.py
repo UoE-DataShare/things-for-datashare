@@ -21,8 +21,11 @@ def main():
         #skip rows with no associated image
         if ('ERROR' in row['Image file']) or ('Could not' in row['Image file']): 
             continue
-        #skip rows from Aberdeen
+        #skip rows from Aberdeen (already imported to DataShare)
         if (row['Present-day Location Authority'] == 'Aberdeen City Council'):
+            continue
+        # skip rows from Lee Bank, Birmingham (already imported to DataShare)
+        if ('Lee Bank redevelopment area' in row['Original Development name(s)']):
             continue
         #get location of images and folder
         impath = row['Image file'].replace('D:\Towerblock Digitised Images', '.')
