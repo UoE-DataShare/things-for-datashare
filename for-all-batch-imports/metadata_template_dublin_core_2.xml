@@ -1,7 +1,6 @@
 <dublin_core>
   <dcvalue element="title" qualifier="none">Tower Blocks UK: substitute-me-city substitute-me-development substitute_me_image</dcvalue>
-  <dcvalue element="contributor" qualifier="other">University of Edinburgh. Scottish Centre for Conservation Studies (SCCS)</dcvalue>
-  <dcvalue element="contributor" qualifier="other">DOCOMOMO International</dcvalue>
+  <dcvalue element="contributor" qualifier="other">Heritage Lottery Fund</dcvalue>
   <dcvalue element="contributor">Glendinning, Miles</dcvalue>
   <dcvalue element="publisher" qualifier="none">University of Edinburgh. Edinburgh College of Art</dcvalue>
   <dcvalue element="type" qualifier="none">image</dcvalue>
